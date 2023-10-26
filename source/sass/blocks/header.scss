@@ -1,0 +1,19 @@
+.header {
+  min-height: 40px;
+  padding: 30px 0;
+  background: $blue-to-red;
+}
+
+.header__links-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__tel {
+  font-family: $ff-roboto;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  color: $color-default-white;
+}

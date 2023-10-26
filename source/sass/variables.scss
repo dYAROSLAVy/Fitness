@@ -9,12 +9,17 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
 
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
+$color-ghost-white:                 #f8f9fc;
+$color-crimson:                     #d10a42;
+$color-sapphire:                    #102654;
+$color-grey:                        #787878;
+$color-whisper:                     #e8e8e8;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$blue-to-red:                       linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+$red-to-blue:                       linear-gradient(97deg, #ed0233 17.6%, #003eb7 95.31%);
 
 // Typography
 // ---------------------------------
