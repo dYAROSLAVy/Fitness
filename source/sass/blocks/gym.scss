@@ -1,0 +1,57 @@
+.gym {
+  padding: 120px 0 235px;
+}
+
+.gym__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 355px 660px;
+  gap: 0 145px;
+}
+
+.gym__text-content {
+  font-family: $ff-roboto;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-default-black;
+}
+
+.gym__text-content h2 {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 1.62px;
+
+  &:not(:last-child) {
+    margin-bottom: 33px;
+  }
+}
+
+.gym__text-content span {
+  display: inline-block;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 95px;
+  }
+}
+
+.gym__text-content p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.gym__text-content ~ iframe {
+  position: absolute;
+  bottom: -115px;
+  right: 31%;
+}

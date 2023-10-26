@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+  margin: 0;
+  font-family: $ff-alumni;
+
+  &--primary {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 1.62px;
+  }
+
+  &--secondary {
+    font-family: $ff-roboto;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+  }
+}

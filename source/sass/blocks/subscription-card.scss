@@ -1,0 +1,49 @@
+.subscription-card {
+  display: grid;
+  justify-items: center;
+  width: 360px;
+  padding: 67px 65px 65px;
+  background-color: $color-default-white;
+  color: $color-sapphire;
+}
+
+.subscription-card__title:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.subscription-card__subtitle:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.subscription-card__btn {
+  min-width: 205px;
+}
+
+.subscription-card__price {
+  position: relative;
+  display: grid;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150px;
+  z-index: 2;
+
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.subscription-card__price-back {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $color-whisper;
+  opacity: 48;
+  font-size: 100px;
+}
+
+.subscription-card__price-forw {
+  margin-top: 28px;
+}

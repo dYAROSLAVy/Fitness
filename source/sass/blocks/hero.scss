@@ -1,0 +1,65 @@
+.hero {
+  padding: 0 0 120px;
+  background: $blue-to-red;
+  color: $color-default-white;
+}
+
+.hero__inner {
+  display: flex;
+  gap: 0 70px;
+  width: 955px;
+}
+
+.hero__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.hero__info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0 2px;
+  width: 385px;
+}
+
+.hero__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 270px;
+}
+
+.hero__title {
+  font-size: 92px;
+  font-weight: 800;
+  line-height: 110px;
+  letter-spacing: 4.6px;
+  text-align: end;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.hero__link {
+  min-width: 230px;
+}
+
+.hero__text {
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
