@@ -1,0 +1,11 @@
+.competitions {
+  padding: 120px 0;
+}
+
+.competitions__promo:not(:last-child) {
+  margin-bottom: 120px;
+}
+
+.competitions__title {
+  text-align: left;
+}

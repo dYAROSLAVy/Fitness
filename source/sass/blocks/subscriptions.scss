@@ -1,4 +1,6 @@
 .subscriptions {
+  position: relative;
+  z-index: 1;
   padding: 126px 0 120px;
   background-color: $color-ghost-white;
 }
@@ -56,4 +58,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.subscriptions__decor {
+  position: absolute;
+  bottom: -150px;
+  right: -17px;
+  z-index: -1;
+  pointer-events: none;
+  display: flex;
+  width: 321px;
+  height: 494px;
 }
