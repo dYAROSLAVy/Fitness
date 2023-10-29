@@ -8,4 +8,30 @@
 
 .competitions__title {
   text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: 45px;
+  }
+}
+
+.competitions__jury-slider {
+  position: relative;
+  display: flex;
+  min-height: 294px;
+}
+
+.competitions__jury-list {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.competitions__jury-btn {
+  position: absolute;
+  width: 56px;
+  height: 56px;
 }

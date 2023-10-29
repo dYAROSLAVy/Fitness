@@ -33,32 +33,38 @@
 
 .promo__date-inner {
   display: grid;
-  gap: 12px;
+  gap: 7px;
+  width: max-content;
   margin: 0;
 }
 
 .promo__text {
   font-size: 18px;
-line-height: 24px;
+  line-height: 24px;
 }
-
 
 .promo__inner-grid {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 6px;
+  padding-top: 4px;
+  border-top: 1px solid;
 }
 
 .promo__number {
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
 }
 
 .promo__date-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
+  width: max-content;
 }
 
 .promo__date {
