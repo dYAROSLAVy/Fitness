@@ -2,9 +2,15 @@
   display: grid;
   justify-items: center;
   width: 360px;
-  padding: 67px 65px 65px;
+  padding: 60px 65px 58px;
   background-color: $color-default-white;
   color: $color-sapphire;
+  border: 7px solid $color-default-white;
+
+  &--hover {
+    border-image: $red-to-blue;
+    border-image-slice: 1;
+  }
 }
 
 .subscription-card__title:not(:last-child) {
@@ -36,7 +42,7 @@
 .subscription-card__price-back {
   position: absolute;
   z-index: -1;
-  top: 0;
+  top: 3px;
   left: 50%;
   transform: translateX(-50%);
   color: $color-whisper;

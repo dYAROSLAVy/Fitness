@@ -18,6 +18,10 @@
     border-color: $color-sapphire;
   }
 
+  &--gradient {
+    background: $red-to-blue;
+  }
+
   &:disabled {
     opacity: 0.5;
 

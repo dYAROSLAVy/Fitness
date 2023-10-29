@@ -1,0 +1,82 @@
+.jury-card {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: end;
+  width: 260px;
+  height: 100%;
+  padding: 45px 20px 26px;
+  color: $color-default-white;
+
+  &:hover {
+    align-items: start;
+    grid-template-rows: max-content 1fr;
+  }
+}
+
+.jury-card:hover > .jury-card__picture::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: $color-sapphire;
+  opacity: 89%;
+}
+
+.jury-card:hover > .jury-card__text-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+}
+
+.jury-card:hover > .jury-card__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.jury-card__subtitle:not(:last-child) {
+  margin-bottom: 33px;
+}
+
+.jury-card__picture {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 260px;
+  height: 100%;
+}
+
+.jury-card__text-wrapper {
+  display: none;
+}
+
+.jury-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  list-style: none;
+}
+
+.jury-card__item {
+  display: flex;
+
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 8px;
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+}
