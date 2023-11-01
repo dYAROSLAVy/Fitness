@@ -1,0 +1,40 @@
+.advantages {
+  padding: 120px 0;
+  background-color: $color-ghost-white;
+}
+
+.advantages__title {
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 340px 240px 340px;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  gap: 116px 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item--primary {
+  grid-row: span 2;
+}
+
+.advantages__item:nth-child(odd):nth-child(1n):nth-child(-n + 4),
+.advantages__item:nth-child(even):nth-child(n + 6):nth-child(-n + 100) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -61px;
+    width: 100%;
+    height: 2px;
+    background-color: $color-crimson;
+    opacity: 20%;
+  }
+}
