@@ -1,0 +1,95 @@
+.accordion {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.accordion__element {
+  &--active {
+    padding-bottom: 24px;
+  }
+}
+
+.accordion__item {
+  border-top: 1px solid;
+  border-color: rgba($color-sapphire, 0.2);
+
+  &:last-child {
+    border-bottom: 1px solid;
+    border-color: rgba($color-sapphire, 0.2);
+  }
+}
+
+.accordion__button {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 33px 45px 32px 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+  border: none;
+}
+
+.accordion__button-decor {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid $color-sapphire;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    transform: rotate(-90deg);
+    background-color: $color-sapphire;
+  }
+}
+
+.accordion__element--active .accordion__button-decor {
+  color: $color-default-white;
+}
+
+.accordion__element--active .accordion__button-decor {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $color-sapphire;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.accordion__element--active .accordion__button {
+  padding: 33px 45px 12px 0;
+}
+
+.accordion__element .accordion__content {
+  display: none;
+}
+
+.accordion__element--active .accordion__content {
+  display: block;
+}
+
+.accordion__content p {
+  max-width: 660px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}

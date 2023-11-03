@@ -20,12 +20,28 @@
   list-style: none;
 }
 
-.advantages__item--primary {
+.advantages__item:nth-child(5n-3) {
   grid-row: span 2;
 }
 
-.advantages__item:nth-child(odd):nth-child(1n):nth-child(-n + 4),
-.advantages__item:nth-child(even):nth-child(n + 6):nth-child(-n + 100) {
+.advantages__item:nth-child(5n-3) .advantage {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  gap: 0;
+  align-items: center;
+  margin-top: 4px;
+  padding: 70px 34px;
+}
+
+.advantages__item:nth-child(5n-3) .advantage__text-content {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.advantages__item:nth-child(5n-4),
+.advantages__item:nth-child(5n-2) {
   position: relative;
 
   &::after {

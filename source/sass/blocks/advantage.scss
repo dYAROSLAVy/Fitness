@@ -4,13 +4,6 @@
   gap: 30px;
 
   &--primary {
-    display: flex;
-    flex-direction: column;
-    min-height: 340px;
-    gap: 0;
-    align-items: center;
-    margin-top: 4px;
-    padding: 70px 34px;
     color: $color-default-white;
     background-color: $color-resolution-blue;
   }
@@ -46,12 +39,6 @@
   background: $red-to-blue-2;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.advantage--primary .advantage__text-content {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
 }
 
 .advantage--primary .advantage__text-content p {
