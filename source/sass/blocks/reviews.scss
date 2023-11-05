@@ -1,0 +1,38 @@
+.reviews {
+  padding: 120px 0;
+}
+
+.reviews__title {
+  &:not(:last-child) {
+    margin-bottom: 46px;
+  }
+}
+
+.reviews__slider-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.reviews__slider-wrapper {
+  width: 560px;
+
+  &:first-child {
+    margin-top: 46px;
+  }
+}
+
+.reviews__slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--prev {
+    left: -6px;
+  }
+
+  &--next {
+    right: -6px;
+  }
+}

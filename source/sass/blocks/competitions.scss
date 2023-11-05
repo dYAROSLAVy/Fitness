@@ -2,6 +2,10 @@
   padding: 120px 0;
 }
 
+.competitions__slider-container {
+  position: relative;
+}
+
 .competitions__promo:not(:last-child) {
   margin-bottom: 120px;
 }
@@ -14,24 +18,20 @@
   }
 }
 
-.competitions__jury-slider {
-  position: relative;
-  display: flex;
-  min-height: 294px;
-}
-
-.competitions__jury-list {
-  display: flex;
-  overflow: hidden;
-  flex-wrap: nowrap;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.competitions__jury-slider:first-child {
+  margin-top: 45px;
 }
 
 .competitions__jury-btn {
   position: absolute;
-  width: 56px;
-  height: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--prev {
+    left: 27px;
+  }
+
+  &--next {
+    right: 27px;
+  }
 }

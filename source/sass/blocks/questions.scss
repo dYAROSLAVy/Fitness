@@ -1,0 +1,47 @@
+.questions {
+  padding: 120px 0;
+}
+
+.questions__title {
+  text-align: left;
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+.questions__tabs {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+}
+
+.questions__tabs-controls {
+  display: grid;
+  gap: 10px;
+  height: min-content;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.questions__tabs-element {
+  width: 100%;
+}
+
+.questions__tab-control {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  color: $color-sapphire;
+  border-color: rgba($color-sapphire, 0.2);
+}
+
+.questions__tab-control.is-active {
+  background: $red-to-blue;
+  color: $color-default-white;
+  border-color: $color-default-white;
+}

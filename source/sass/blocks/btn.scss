@@ -18,8 +18,16 @@
     border-color: $color-sapphire;
   }
 
-  &--gradient {
+  &--secondary {
     background: $red-to-blue;
+  }
+
+  &--arrow {
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    padding: 0 15px;
+    border-radius: 50%;
   }
 
   &:disabled {

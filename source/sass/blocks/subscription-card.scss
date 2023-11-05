@@ -4,7 +4,6 @@
   width: 360px;
   padding: 60px 65px 58px;
   background-color: $color-default-white;
-  color: $color-sapphire;
   border: 7px solid $color-default-white;
 
   &--hover {
@@ -52,4 +51,5 @@
 
 .subscription-card__price-forw {
   margin-top: 28px;
+  color: $color-egyptian-blue;
 }

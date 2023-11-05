@@ -1,0 +1,23 @@
+.promotions {
+  padding: 120px 0;
+}
+
+.promotions__title:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.promotions__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promotions__item {
+  &--primary {
+    grid-row: span 2;
+  }
+}
