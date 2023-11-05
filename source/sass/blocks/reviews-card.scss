@@ -15,6 +15,10 @@
   height: 80px;
 }
 
+.reviews-card__text-content {
+  overflow-y: auto;
+}
+
 .reviews-card__picture-wrapper img {
   border-radius: 50%;
 }

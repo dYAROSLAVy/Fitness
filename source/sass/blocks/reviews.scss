@@ -8,19 +8,19 @@
   }
 }
 
-.reviews__slider-wrapper {
+.reviews__slider-container {
   position: relative;
-  width: 560px;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 
-.reviews__slider {
-  display: flex;
+.reviews__slider-wrapper {
   width: 560px;
-  flex-wrap: nowrap;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
+
+  &:first-child {
+    margin-top: 46px;
+  }
 }
 
 .reviews__slider-button {
@@ -29,10 +29,10 @@
   transform: translateY(-50%);
 
   &--prev {
-    left: -76px;
+    left: -6px;
   }
 
   &--next {
-    right: -76px;
+    right: -6px;
   }
 }
