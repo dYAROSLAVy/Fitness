@@ -32,6 +32,14 @@
 
 .competitions__jury-btn {
   position: absolute;
-  width: 56px;
-  height: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--prev {
+    left: -76px;
+  }
+
+  &--next {
+    right: -76px;
+  }
 }

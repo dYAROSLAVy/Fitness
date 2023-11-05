@@ -3,7 +3,8 @@
 
 @import "vendor/normalize";
 @import "vendor/swiper";
-@import "vendor/accordion";
+@import "vendor/data-accordion";
+@import "vendor/data-tabs.scss";
 
 // Global
 // ---------------------------------
@@ -34,7 +35,8 @@
 @import "blocks/promotion";
 @import "blocks/questions";
 @import "blocks/accordion";
-
+@import "blocks/reviews";
+@import "blocks/reviews-card";
 
 // ---------------------------------
 

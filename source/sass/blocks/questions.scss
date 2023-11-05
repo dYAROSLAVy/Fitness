@@ -25,6 +25,10 @@
   list-style: none;
 }
 
+.questions__tabs-element {
+  width: 100%;
+}
+
 .questions__tab-control {
   width: 100%;
   padding: 16px;
@@ -32,16 +36,12 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: normal;
-}
-
-.questions__tab-control:not(.btn--secondary) {
+  color: $color-sapphire;
   border-color: rgba($color-sapphire, 0.2);
 }
 
-.questions__tabs-element {
-  display: none;
-
-  &--active {
-    display: block;
-  }
+.questions__tab-control.is-active {
+  background: $red-to-blue;
+  color: $color-default-white;
+  border-color: $color-default-white;
 }

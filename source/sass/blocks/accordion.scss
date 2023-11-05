@@ -4,12 +4,6 @@
   list-style: none;
 }
 
-.accordion__element {
-  &--active {
-    padding-bottom: 24px;
-  }
-}
-
 .accordion__item {
   border-top: 1px solid;
   border-color: rgba($color-sapphire, 0.2);
@@ -20,20 +14,25 @@
   }
 }
 
-.accordion__button {
+.accordion__element-content button:first-of-type {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 33px 45px 32px 0;
+  border: none;
+  background-color: $color-default-white;
+  color: $color-sapphire;
+}
+
+.accordion__element-content b {
+  margin: 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: normal;
-  border: none;
 }
 
-.accordion__button-decor {
+.accordion__element-content span:first-of-type {
   position: absolute;
   right: 0;
   top: 25px;
@@ -55,11 +54,14 @@
   }
 }
 
-.accordion__element--active .accordion__button-decor {
-  color: $color-default-white;
+.accordion__item.is-active .accordion__element-content {
+  padding-bottom: 24px;
 }
 
-.accordion__element--active .accordion__button-decor {
+.accordion__item.is-active .accordion__element-content span:first-of-type {
+  z-index: 1;
+  color: $color-default-white;
+
   &::before {
     content: "";
     position: absolute;
@@ -75,19 +77,11 @@
   }
 }
 
-.accordion__element--active .accordion__button {
+.accordion__item.is-active .accordion__element-content button:first-of-type {
   padding: 33px 45px 12px 0;
 }
 
-.accordion__element .accordion__content {
-  display: none;
-}
-
-.accordion__element--active .accordion__content {
-  display: block;
-}
-
-.accordion__content p {
+.accordion__element-content p {
   max-width: 660px;
   margin: 0;
   font-size: 18px;
