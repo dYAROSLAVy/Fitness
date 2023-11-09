@@ -21,8 +21,27 @@
   width: 100%;
   padding: 33px 45px 32px 0;
   border: none;
-  background-color: $color-default-white;
+  background-color: transparent;
   color: $color-sapphire;
+}
+
+.accordion__element-content button:first-of-type:hover span:first-of-type,
+.accordion__element-content button:first-of-type:focus span:first-of-type {
+  color: $color-default-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $color-sapphire;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &::after {
+    background-color: $color-default-white;
+  }
 }
 
 .accordion__element-content b {
@@ -58,7 +77,8 @@
   padding-bottom: 24px;
 }
 
-.accordion__item.is-active .accordion__element-content span:first-of-type {
+.accordion__item.is-active .accordion__element-content span:first-of-type,
+.accordion__element-content button:first-of-type:active span:first-of-type {
   z-index: 1;
   color: $color-default-white;
 

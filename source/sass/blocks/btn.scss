@@ -11,32 +11,104 @@
   background-color: $color-transparent;
   border: 2px solid $color-default-white;
   cursor: pointer;
-
-
-  &--primary {
-    color: $color-sapphire;
-    border-color: $color-sapphire;
-  }
-
-  &--secondary {
-    background: $red-to-blue;
-  }
-
-  &--arrow {
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    padding: 0 15px;
-    border-radius: 50%;
-  }
+  user-select: none;
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
+}
+
+.btn:not(.disabled) {
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  @include active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+}
+
+.btn.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.btn--primary:not(.disabled) {
+  color: $color-sapphire;
+  border-color: $color-sapphire;
 
   @include hover-focus {
-    opacity: 0.8;
+    background: $red-to-blue;
+    color: $color-default-white;
+    border-color: transparent;
+  }
+
+  @include active {
+    background: $red-to-blue;
+    border-color: transparent;
+    color: rgba($color-default-white, 0.7);
+  }
+}
+
+.btn--secondary {
+  background: $red-to-blue;
+}
+
+.btn--secondary:not(.disabled) {
+  @include hover-focus {
+    background: $color-default-white;
+  }
+
+  @include active {
+    background: $color-default-white;
+  }
+}
+
+.btn--secondary.disabled {
+  opacity: 0.5;
+  color: $color-default-white;
+  border-color: $color-default-white;
+}
+
+.btn--primary.disabled {
+  opacity: 0.3;
+  color: $color-sapphire;
+  border-color: $color-sapphire;
+}
+
+.btn--arrow {
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 0 15px;
+  border-radius: 50%;
+  border: solid 1px transparent;
+  color: $color-sapphire;
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.btn--arrow:not(.disabled) {
+  @include hover-focus {
+    border-color: $color-sapphire;
+    color: $color-sapphire;
+
+    &:focus-visible {
+      outline-offset: 3px;
+    }
+  }
+
+  @include active {
+    background-color: $color-sapphire;
+    color: $color-default-white;
   }
 }

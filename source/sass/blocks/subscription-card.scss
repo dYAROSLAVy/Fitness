@@ -2,11 +2,16 @@
   display: grid;
   justify-items: center;
   width: 360px;
-  padding: 60px 65px 58px;
+  padding: 60px 65px 59px;
   background-color: $color-default-white;
   border: 7px solid $color-default-white;
 
-  &--hover {
+  &--hero {
+    border-image: $red-to-blue;
+    border-image-slice: 1;
+  }
+
+  @include hover-focus {
     border-image: $red-to-blue;
     border-image-slice: 1;
   }

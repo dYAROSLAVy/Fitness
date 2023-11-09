@@ -1,0 +1,156 @@
+.footer {
+  padding: 20px 0;
+  background-color: $color-black-russian;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: inline-flex;
+  padding: 20px 0;
+  color: $color-default-white;
+}
+
+.footer__nav,
+.footer__socials {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__nav {
+  min-width: 465px;
+  gap: 21px;
+}
+
+.footer__socials {
+  gap: 10px;
+}
+
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-default-white;
+
+  &--nav {
+    position: relative;
+    padding: 5px 10px;
+  }
+
+  &--logo {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &:not([href]) {
+      pointer-events: none;
+    }
+
+    &:hover[href] {
+      opacity: 0.7;
+    }
+
+    &:focus[href] {
+      opacity: 0.7;
+    }
+
+    &:active[href] {
+      opacity: 0.5;
+    }
+  }
+
+  &--socials {
+    position: relative;
+    z-index: 1;
+    width: 25px;
+    height: 65px;
+    color: $color-black-russian;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.footer__link--nav:not(.disabled) {
+  @include hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      height: 1px;
+      width: calc(100% - 20px);
+      background-color: $color-default-white;
+    }
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-white;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include active {
+    outline: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.footer__link--socials:not(.disabled) {
+  @include hover-focus {
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-egyptian-blue;
+    }
+  }
+
+  @include active {
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-sapphire;
+    }
+  }
+}
+
+.footer__link.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.footer__link--socials.disabled {
+  color: $color-black-russian;
+
+  &::before {
+    opacity: 0.3;
+  }
+}

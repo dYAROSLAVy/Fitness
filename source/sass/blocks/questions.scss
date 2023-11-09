@@ -1,5 +1,6 @@
 .questions {
   padding: 120px 0;
+  background-color: $color-ghost-white;
 }
 
 .questions__title {
@@ -37,11 +38,40 @@
   line-height: 18px;
   letter-spacing: normal;
   color: $color-sapphire;
+
+  &:disabled {
+    color: $color-link-water;
+  }
+}
+
+.questions__tab-control:not(.disabled) {
   border-color: rgba($color-sapphire, 0.2);
+
+  @include hover-focus {
+    border-color: $color-sapphire;
+    color: $color-sapphire;
+  }
+
+  @include active {
+    background: $red-to-blue;
+    color: $color-default-white;
+    border-color: $color-default-white;
+  }
 }
 
 .questions__tab-control.is-active {
   background: $red-to-blue;
   color: $color-default-white;
   border-color: $color-default-white;
+
+  @include hover-focus {
+    background: $color-default-white;
+    color: $color-egyptian-blue;
+    border-color: $color-default-white;
+  }
+
+  @include active {
+    background: $color-default-white;
+    color: $color-sapphire;
+  }
 }

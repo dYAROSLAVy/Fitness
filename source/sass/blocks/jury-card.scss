@@ -9,13 +9,14 @@
   padding: 45px 20px 26px;
   color: $color-default-white;
 
-  &:hover {
+  @include hover-focus {
     align-items: start;
     grid-template-rows: max-content 1fr;
   }
 }
 
-.jury-card:hover > .jury-card__picture::before {
+.jury-card:hover > .jury-card__picture::before,
+.jury-card:focus > .jury-card__picture::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -24,14 +25,16 @@
   opacity: 89%;
 }
 
-.jury-card:hover > .jury-card__text-wrapper {
+.jury-card:hover > .jury-card__text-wrapper,
+.jury-card:focus > .jury-card__text-wrapper {
   height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr;
   justify-items: center;
 }
 
-.jury-card:hover > .jury-card__title:not(:last-child) {
+.jury-card:hover > .jury-card__title:not(:last-child),
+.jury-card:focus > .jury-card__title:not(:last-child) {
   margin-bottom: 8px;
 }
 
