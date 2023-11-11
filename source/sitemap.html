@@ -15,13 +15,35 @@
       <header class="header">
         <div class="container">
           <a class="header__link">
-            <img
-              src="img/logo.png"
-              srcset="img/logo@2x.png"
-              alt="Логотип сайта"
-              width="120"
-              height="26"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 1365px)"
+                srcset="
+                  img/heder-logo-tab.webp,
+                  img/heder-logo-tab@2x.webp 2x
+                "
+                width="111"
+                height="24"
+              />
+              <source
+                media="(max-width: 1365px)"
+                srcset="img/heder-logo-tab.png, img/heder-logo-tab@2x.png 2x"
+                width="111"
+                height="24"
+              />
+              <source
+                type="image/webp"
+                srcset="img/heder-logo.webp, img/heder-logo@2x.webp 2x"
+              />
+              <img
+                src="img/heder-logo.png"
+                srcset="img/heder-logo@2x.png"
+                alt="Логотип сайта"
+                width="120"
+                height="26"
+              />
+            </picture>
           </a>
         </div>
       </header>

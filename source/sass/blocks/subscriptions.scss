@@ -3,10 +3,18 @@
   z-index: 1;
   padding: 126px 0 120px;
   background-color: $color-ghost-white;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .subscriptions__title:not(:last-child) {
-  margin-bottom: 23px;
+  margin-bottom: 14px;
+
+  @include vp-1365 {
+    margin-bottom: 18px;
+  }
 }
 
 .subscriptions__buttons-wrapper {
@@ -24,17 +32,25 @@
     right: 0;
     height: 2px;
     width: 100%;
-    background-color: $color-grey;
-    opacity: 20%;
+    background: rgba($color-grey, 0.2);
   }
 
   &:not(:last-child) {
-    margin-bottom: 37px;
+    margin-bottom: 36px;
+  }
+
+  @include vp-1365 {
+    gap: 55px;
+
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
   }
 }
 
 .subscriptions__button {
-  padding: 11px 0;
+  position: relative;
+  padding: 20px 0 13px;
   border: 0;
   font-family: $ff-roboto;
   font-size: 20px;
@@ -43,11 +59,57 @@
   color: $color-sapphire;
   opacity: 50%;
   background-color: $color-transparent;
+  user-select: none;
+
+  @include vp-1365 {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+  }
 
   &--current {
     color: $color-sapphire;
     opacity: 1;
-    border-bottom: 2px solid $color-crimson;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+
+  @include hover-focus {
+    color: $color-sapphire;
+    opacity: 1;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+
+  @include active {
+    color: $color-sapphire;
+    opacity: 1;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &::after {
+      background: rgba($color-sapphire, 0.3);
+    }
   }
 }
 
@@ -58,15 +120,32 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.subscription__item {
+  display: flex;
+  width: 65%;
 }
 
 .subscriptions__decor {
   position: absolute;
-  bottom: -150px;
-  right: -17px;
+  bottom: -68px;
+  right: 0;
   z-index: -1;
   pointer-events: none;
   display: flex;
-  width: 321px;
-  height: 494px;
+  width: 287px;
+  height: 331px;
+
+  @include vp-1365 {
+    bottom: -98px;
+    right: 0;
+    width: 327px;
+    height: 324px;
+  }
 }

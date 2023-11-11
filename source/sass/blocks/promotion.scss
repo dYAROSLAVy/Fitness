@@ -1,7 +1,7 @@
 .promotion {
   display: grid;
   min-height: 211px;
-  padding: 23px 28px 28px;
+  padding: 23px 28px 23px;
   border: 7px solid;
   border-image: $red-to-blue;
   border-image-slice: 1;
@@ -23,7 +23,11 @@
 }
 
 .promotion--primary .promotion__text-content {
-  padding: 40px 45px 45px;
+  padding: 40px 45px 40px;
+
+  @include vp-1365 {
+    padding: 45px 45px 40px;
+  }
 }
 
 .promotion--primary .promotion__text-content b {
@@ -34,18 +38,28 @@
   &:not(:last-child) {
     margin-bottom: 25px;
   }
-}
 
-.promotion--primary .promotion__text-content a {
-  color: $color-default-white;
-
-  &::after {
-    background-color: $color-default-white;
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
 .promotion--primary .promotion__text-content h3 + b {
   margin-top: 5px;
+
+  @include vp-1365 {
+    margin-top: 0;
+  }
+}
+
+.promotion--primary .promotion__text-content h3 {
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .promotion--primary .promotion__text-content p {
@@ -66,6 +80,12 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  @include vp-1365 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+  }
 }
 
 .promotion__text-content p {
@@ -82,7 +102,8 @@
 
 .promotion__text-content a {
   position: relative;
-  padding-bottom: 5px;
+  margin-left: -10px;
+  padding: 10px;
   font-size: 14px;
   font-weight: 700;
   line-height: 14px;
@@ -91,10 +112,49 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 5px;
+    left: 10px;
     height: 1px;
-    width: 100%;
+    width: calc(100% - 20px);
     background-color: $color-sapphire;
+  }
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  @include focus {
+    outline: 1px solid $color-sapphire;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include active {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.promotion__text-content a.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.promotion--primary .promotion__text-content a.disabled {
+  opacity: 0.5;
+}
+
+.promotion--primary .promotion__text-content a {
+  color: $color-default-white;
+
+  &::after {
+    background-color: $color-default-white;
+  }
+
+  @include focus {
+    outline: 1px solid $color-default-white;
   }
 }

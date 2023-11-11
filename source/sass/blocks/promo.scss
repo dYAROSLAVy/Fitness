@@ -1,12 +1,22 @@
 .promo {
   display: grid;
-  grid-template-columns: 500px 660px;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1365 {
+    grid-template-columns: 292px 386px;
+  }
 }
 
 .promo__text-wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 80px;
   background-color: $color-torch-red;
   color: $color-default-white;
+
+  @include vp-1365 {
+    padding: 40px 45px 45px;
+  }
 }
 
 .promo__text-inner {
@@ -14,6 +24,12 @@
 
   &:not(:last-child) {
     margin-bottom: 23px;
+  }
+
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
   }
 }
 
@@ -23,12 +39,22 @@
   line-height: 76px;
   letter-spacing: 2.46px;
   text-align: left;
+
+  @include vp-1365 {
+    font-size: 48px;
+    line-height: 46px;
+    letter-spacing: 1.44px;
+  }
 }
 
 .promo__date-wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
   gap: 20px;
+
+  @include vp-1365 {
+    gap: 8px;
+  }
 }
 
 .promo__date-inner {
@@ -36,6 +62,10 @@
   gap: 7px;
   width: max-content;
   margin: 0;
+
+  @include vp-1365 {
+    gap: 0;
+  }
 }
 
 .promo__text {
@@ -48,6 +78,10 @@
   grid-template-columns: max-content 1fr;
   padding-top: 4px;
   border-top: 1px solid;
+
+  @include vp-1365 {
+    padding-top: 1px;
+  }
 }
 
 .promo__number {
@@ -57,6 +91,16 @@
 
   &:not(:last-child) {
     margin-right: 6px;
+  }
+
+  @include vp-1365 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
   }
 }
 
@@ -71,6 +115,11 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
+
+  @include vp-1365 {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .promo__subtitle {
@@ -82,13 +131,26 @@
   &:not(:last-child) {
     margin-bottom: 55px;
   }
+
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .promo__link {
   width: 100%;
+  margin-top: auto;
 }
 
 .promo__image-wrapper {
+  display: flex;
   width: 660px;
   height: 500px;
+
+  @include vp-1365 {
+    width: 100%;
+    height: 324px;
+  }
 }

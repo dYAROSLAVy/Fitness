@@ -7,6 +7,10 @@
     color: $color-default-white;
     background-color: $color-resolution-blue;
   }
+
+  @include vp-1365 {
+    gap: 15px;
+  }
 }
 
 .advantage__text-content {
@@ -33,6 +37,15 @@
   &:not(:last-child) {
     margin-bottom: 8px;
   }
+
+  @include vp-1365 {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .advantage__text-content--primary {
@@ -43,10 +56,18 @@
 
 .advantage--primary .advantage__text-content p {
   text-align: center;
+
+  @include vp-1365 {
+    max-width: 210px;
+  }
 }
 
 .advantage--primary .advantage__text-content b:not(:last-child) {
   margin-bottom: 12px;
+
+  @include vp-1365 {
+    margin-bottom: 25px;
+  }
 }
 
 .advantage--primary .advantage__text-content span {
@@ -56,5 +77,13 @@
 
   &:not(:last-child) {
     margin-bottom: 34px;
+  }
+
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

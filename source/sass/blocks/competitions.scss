@@ -1,13 +1,29 @@
 .competitions {
   padding: 120px 0;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .competitions__slider-container {
   position: relative;
+
+  @include vp-1365 {
+    padding: 0 100px;
+  }
+}
+
+.competitions__promo {
+  justify-content: center;
 }
 
 .competitions__promo:not(:last-child) {
   margin-bottom: 120px;
+
+  @include vp-1365 {
+    margin-bottom: 100px;
+  }
 }
 
 .competitions__title {
@@ -16,10 +32,18 @@
   &:not(:last-child) {
     margin-bottom: 45px;
   }
+
+  @include vp-1365 {
+    text-align: center;
+  }
 }
 
-.competitions__jury-slider:first-child {
+.competitions__jury-slider:first-of-type {
   margin-top: 45px;
+
+  @include vp-1365 {
+    margin-top: 40px;
+  }
 }
 
 .competitions__jury-btn {

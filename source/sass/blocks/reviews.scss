@@ -1,5 +1,9 @@
 .reviews {
   padding: 120px 0;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .reviews__title {
@@ -21,6 +25,13 @@
   &:first-child {
     margin-top: 46px;
   }
+
+  @include vp-1365 {
+    &:first-child {
+      margin-top: 42px;
+      width: 580px;
+    }
+  }
 }
 
 .reviews__slider-button {
@@ -34,5 +45,15 @@
 
   &--next {
     right: -6px;
+  }
+
+  @include vp-1365 {
+    &--prev {
+      left: -9px;
+    }
+
+    &--next {
+      right: -9px;
+    }
   }
 }

@@ -1,6 +1,10 @@
 .advantages {
   padding: 120px 0;
   background-color: $color-ghost-white;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .advantages__title {
@@ -18,10 +22,22 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1365 {
+    grid-template-columns: 314px 314px;
+    grid-template-rows: min-content 1fr min-content;
+    grid-auto-flow: dense;
+    justify-items: center;
+    gap: 38px 50px;
+  }
 }
 
 .advantages__item:nth-child(5n-3) {
   grid-row: span 2;
+
+  @include vp-1365 {
+    grid-column: span 2;
+  }
 }
 
 .advantages__item:nth-child(5n-3) .advantage {
@@ -32,6 +48,13 @@
   align-items: center;
   margin-top: 4px;
   padding: 70px 34px;
+
+  @include vp-1365 {
+    width: 400px;
+    min-height: auto;
+    margin-top: 0;
+    padding: 35px;
+  }
 }
 
 .advantages__item:nth-child(5n-3) .advantage__text-content {
@@ -52,5 +75,11 @@
     height: 2px;
     background-color: $color-crimson;
     opacity: 20%;
+  }
+
+  @include vp-1365 {
+    &::after {
+      display: none;
+    }
   }
 }

@@ -1,5 +1,10 @@
 .questions {
   padding: 120px 0;
+  background-color: $color-ghost-white;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .questions__title {
@@ -8,12 +13,21 @@
   &:not(:last-child) {
     margin-bottom: 50px;
   }
+
+  @include vp-1365 {
+    text-align: center;
+  }
 }
 
 .questions__tabs {
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 40px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr;
+    gap: 39px;
+  }
 }
 
 .questions__tabs-controls {
@@ -23,6 +37,10 @@
   margin: 2px 0 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1365 {
+    display: flex;
+  }
 }
 
 .questions__tabs-element {
@@ -37,11 +55,45 @@
   line-height: 18px;
   letter-spacing: normal;
   color: $color-sapphire;
+
+  &:disabled {
+    color: $color-link-water;
+  }
+
+  @include vp-1365 {
+    min-width: 162px;
+    border: 1px solid;
+  }
+}
+
+.questions__tab-control:not(.disabled) {
   border-color: rgba($color-sapphire, 0.2);
+
+  @include hover-focus {
+    border-color: $color-sapphire;
+    color: $color-sapphire;
+  }
+
+  @include active {
+    background: $red-to-blue;
+    color: $color-default-white;
+    border-color: $color-default-white;
+  }
 }
 
 .questions__tab-control.is-active {
   background: $red-to-blue;
   color: $color-default-white;
   border-color: $color-default-white;
+
+  @include hover-focus {
+    background: $color-default-white;
+    color: $color-egyptian-blue;
+    border-color: $color-default-white;
+  }
+
+  @include active {
+    background: $color-default-white;
+    color: $color-sapphire;
+  }
 }
