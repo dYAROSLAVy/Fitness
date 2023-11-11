@@ -2,12 +2,20 @@
   padding: 0 0 120px;
   background: $blue-to-red;
   color: $color-default-white;
+
+  @include vp-1365 {
+    padding: 0 0 100px;
+  }
 }
 
 .hero__inner {
   display: flex;
   gap: 0 70px;
-  width: 955px;
+
+  @include vp-1365 {
+    justify-content: space-evenly;
+    gap: 0 30px;
+  }
 }
 
 .hero__list {
@@ -26,7 +34,10 @@
   display: flex;
   align-items: center;
   gap: 0 2px;
-  width: 385px;
+
+  @include vp-1365 {
+    gap: 0 26px;
+  }
 }
 
 .hero__text-wrapper {
@@ -34,6 +45,10 @@
   flex-direction: column;
   align-items: end;
   width: 270px;
+
+  @include vp-1365 {
+    width: 185px;
+  }
 }
 
 .hero__title {
@@ -46,10 +61,21 @@
   &:not(:last-child) {
     margin-bottom: 50px;
   }
+
+  @include vp-1365 {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: normal;
+  }
 }
 
 .hero__link {
   min-width: 230px;
+
+  @include vp-1365 {
+    width: 100%;
+    min-width: auto;
+  }
 }
 
 .hero__text {
@@ -62,10 +88,21 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
 }
 
 .hero__picture-wrapper {
   display: flex;
   width: 500px;
   height: 524px;
+
+  @include vp-1365 {
+    width: 324px;
+    height: 390px;
+  }
 }

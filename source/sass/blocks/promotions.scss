@@ -1,9 +1,17 @@
 .promotions {
   padding: 120px 0;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .promotions__title:not(:last-child) {
   margin-bottom: 70px;
+
+  @include vp-1365 {
+    margin-bottom: 40px;
+  }
 }
 
 .promotions__list {
@@ -14,10 +22,20 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1365 {
+    gap: 30px;
+  }
 }
 
 .promotions__item {
   &--primary {
     grid-row: span 2;
+  }
+
+  @include vp-1365 {
+    &--primary {
+      grid-column: span 2;
+    }
   }
 }

@@ -1,12 +1,20 @@
 .footer {
   padding: 20px 0;
   background-color: $color-black-russian;
+
+  @include vp-1365 {
+    padding: 25px 0;
+  }
 }
 
 .footer__inner {
   display: grid;
   grid-template-columns: max-content max-content max-content;
   justify-content: space-between;
+
+  @include vp-1365 {
+    gap: 10px;
+  }
 }
 
 .footer__logo {
@@ -28,6 +36,12 @@
 .footer__nav {
   min-width: 465px;
   gap: 21px;
+
+  @include vp-1365 {
+    min-width: auto;
+    gap: 10px;
+    margin-left: -5px;
+  }
 }
 
 .footer__socials {
@@ -53,6 +67,11 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
+
+    @include vp-1365 {
+      font-size: 22px;
+      line-height: 22px;
+    }
 
     &:not([href]) {
       pointer-events: none;

@@ -25,13 +25,35 @@
         <div class="container">
           <div class="header__links-wrapper">
             <a class="header__link">
-              <img
-                src="img/logo.png"
-                srcset="img/logo@2x.png"
-                alt="Логотип сайта"
-                width="120"
-                height="26"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 1365px)"
+                  srcset="
+                    img/heder-logo-tab.webp,
+                    img/heder-logo-tab@2x.webp 2x
+                  "
+                  width="111"
+                  height="24"
+                />
+                <source
+                  media="(max-width: 1365px)"
+                  srcset="img/heder-logo-tab.png, img/heder-logo-tab@2x.png 2x"
+                  width="111"
+                  height="24"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/heder-logo.webp, img/heder-logo@2x.webp 2x"
+                />
+                <img
+                  src="img/heder-logo.png"
+                  srcset="img/heder-logo@2x.png"
+                  alt="Логотип сайта"
+                  width="120"
+                  height="26"
+                />
+              </picture>
             </a>
             <a class="header__tel" href="tel:+88005555555">8-800-555-55-55</a>
           </div>
@@ -57,6 +79,23 @@
               </div>
               <div class="hero__picture-wrapper">
                 <picture>
+                  <source
+                    type="image/webp"
+                    media="(max-width: 1365px)"
+                    srcset="img/hero-tab.webp, img/hero-tab@2x.webp 2x"
+                    width="324"
+                    height="390"
+                  />
+                  <source
+                    media="(max-width: 1365px)"
+                    srcset="img/hero-tab.jpg, img/hero-tab@2x.jpg 2x"
+                    width="324"
+                    height="390"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="img/hero.webp, img/hero@2x.webp 2x"
+                  />
                   <img
                     src="img/hero.jpg"
                     srcset="img/hero@2x.jpg"
@@ -90,13 +129,32 @@
               </div>
               <div class="gym__media-wrapper">
                 <div class="gym__img-wrapper">
-                  <img
-                    src="img/gym.jpg"
-                    srcset="img/gym@2x.jpg"
-                    width="660"
-                    height="401"
-                    alt="Фото просторного спортивного зала."
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 1365px)"
+                      srcset="img/gym-tab.webp, img/gym-tab@2x.webp 2x"
+                      width="678"
+                      height="345"
+                    />
+                    <source
+                      media="(max-width: 1365px)"
+                      srcset="img/gym-tab.jpg, img/gym-tab@2x.jpg 2x"
+                      width="678"
+                      height="345"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="img/gym.webp, img/gym@2x.webp 2x"
+                    />
+                    <img
+                      src="img/gym.jpg"
+                      srcset="img/gym@2x.jpg"
+                      width="660"
+                      height="401"
+                      alt="Фото просторного спортивного зала."
+                    />
+                  </picture>
                 </div>
                 <div class="gym__video-wrapper">
                   <!-- <iframe
@@ -133,7 +191,7 @@
               </button>
             </div>
             <ul class="subscriptions__list">
-              <li>
+              <li class="subscription__item">
                 <div class="subscription-card" tabindex="0">
                   <h3 class="subscription-card__title title title--secondary">
                     С тренером
@@ -153,7 +211,7 @@
                   >
                 </div>
               </li>
-              <li>
+              <li class="subscription__item">
                 <div
                   class="subscription-card subscription-card--hero"
                   tabindex="0"
@@ -178,7 +236,7 @@
                   >
                 </div>
               </li>
-              <li>
+              <li class="subscription__item">
                 <div class="subscription-card" tabindex="0">
                   <h3 class="subscription-card__title title title--secondary">
                     Полный день
@@ -202,13 +260,38 @@
               </li>
             </ul>
             <div class="subscriptions__decor">
-              <img
-                src="img/weight-plates.png"
-                srcset="img/weight-plates@2x.png"
-                width="321"
-                height="384"
-                alt=""
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 1365px)"
+                  srcset="
+                    img/weight-plates-tab.webp,
+                    img/weight-plates-tab@2x.webp 2x
+                  "
+                  width="678"
+                  height="345"
+                />
+                <source
+                  media="(max-width: 1365px)"
+                  srcset="
+                    img/weight-plates-tab.png,
+                    img/weight-plates-tab@2x.png 2x
+                  "
+                  width="678"
+                  height="345"
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/weight-plates.webp, img/weight-plates@2x.webp 2x"
+                />
+                <img
+                  src="img/weight-plates.png"
+                  srcset="img/weight-plates@2x.png"
+                  width="321"
+                  height="384"
+                  alt=""
+                />
+              </picture>
             </div>
           </div>
         </section>
@@ -244,13 +327,38 @@
                 <a class="promo__link btn" href="#">ЗАПОЛНИТЬ ЗАЯВКУ</a>
               </div>
               <div class="promo__image-wrapper">
-                <img
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(max-width: 1365px)"
+                    srcset="
+                      img/competition-tab.webp,
+                      img/competition-tab@2x.webp 2x
+                    "
+                    width="386"
+                    height="324"
+                  />
+                  <source
+                    media="(max-width: 1365px)"
+                    srcset="
+                      img/competition-tab.jpg,
+                      img/competition-tab@2x.jpg 2x
+                    "
+                    width="386"
+                    height="324"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="img/competition.webp, img/competition@2x.webp 2x"
+                  />
+                  <img
                   src="img/competition.jpg"
                   srcset="img/competition@2x.jpg"
                   width="660"
                   height="500"
-                  alt="Фото просторного спортивного зала."
+                  alt="Фото спортсмена."
                 />
+                </picture>
               </div>
             </div>
             <h3 class="competitions__title title title--primary">Жюри</h3>
@@ -282,8 +390,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-1.jpg"
-                      srcset="img/jury-1@2x.jpg"
+                      src="img/jury/jury-1.jpg"
+                      srcset="img/jury/jury-1@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -306,8 +414,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-2.jpg"
-                      srcset="img/jury-2@2x.jpg"
+                      src="img/jury/jury-2.jpg"
+                      srcset="img/jury/jury-2@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -330,8 +438,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-3.jpg"
-                      srcset="img/jury-3@2x.jpg"
+                      src="img/jury/jury-3.jpg"
+                      srcset="img/jury/jury-3@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -354,8 +462,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-4.jpg"
-                      srcset="img/jury-4@2x.jpg"
+                      src="img/jury/jury-4.jpg"
+                      srcset="img/jury/jury-4@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -378,8 +486,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-2.jpg"
-                      srcset="img/jury-2@2x.jpg"
+                      src="img/jury/jury-2.jpg"
+                      srcset="img/jury/jury-2@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -402,8 +510,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-4.jpg"
-                      srcset="img/jury-4@2x.jpg"
+                      src="img/jury/jury-4.jpg"
+                      srcset="img/jury/jury-4@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -426,8 +534,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-1.jpg"
-                      srcset="img/jury-1@2x.jpg"
+                      src="img/jury/jury-1.jpg"
+                      srcset="img/jury/jury-1@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -450,8 +558,8 @@
                   </div>
                   <div class="jury-card__picture">
                     <img
-                      src="img/jury-2.jpg"
-                      srcset="img/jury-2@2x.jpg"
+                      src="img/jury/jury-2.jpg"
+                      srcset="img/jury/jury-2@2x.jpg"
                       width="260"
                       height="294"
                       alt=""
@@ -558,7 +666,7 @@
                   <div class="promotion__text-content">
                     <h3>Год</h3>
                     <b>4999</b>
-                    <p>Безлимитный абонемент в тренажерный зал</p>
+                    <p>Безлимитный абонемент<br> в тренажерный зал</p>
                     <a href="#">ПОДРОБНЕЕ</a>
                   </div>
                   <div class="promotion__picture-wrapper">
@@ -576,7 +684,7 @@
                 <div class="promotion">
                   <div class="promotion__text-content">
                     <h3>Месяц бесплатно</h3>
-                    <p>Приведи друга, получи абонемент в подарок</p>
+                    <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
                     <a href="#">ПОДРОБНЕЕ</a>
                   </div>
                 </div>
@@ -722,8 +830,7 @@
                     <div class="accordion__element-content">
                       <button type="button" data-accordion="button">
                         <b>
-                          Сколько тренеров работает в клубе и какова их
-                          квалификация?
+                          Сколько тренеров работает в клубе и какова их&nbsp;квалификация?
                         </b>
                         <span>
                           <svg width="20" height="2">
@@ -1101,7 +1208,7 @@
                   <div class="reviews-card__text-content">
                     <h3>Анна Орлова</h3>
                     <p>
-                      «Хожу в Supergym уже больше года. Нравится, что в клубе
+                      «Хожу в Supergym уже больше года. Нравится, что в&nbsp;клубе
                       всегда чисто, тренажеры обновляют, персонал дружелюбный.
                       Зал просторный, даже в вечернее время нет очередей»
                     </p>
@@ -1195,11 +1302,11 @@
                 <div class="contacts__column">
                   <div class="contacts__inner">
                     <h3 class="contacts__subtitle">Телефон:</h3>
-                    <p class="contacts__text">8-800-555-55-55</p>
+                    <a class="contacts__text contacts__text--link" href="tel:88005555555">8-800-555-55-55</a>
                   </div>
                   <div class="contacts__inner">
                     <h3 class="contacts__subtitle">Email:</h3>
-                    <p class="contacts__text">omsk@supergym.ru</p>
+                    <a class="contacts__text contacts__text--link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
                   </div>
                 </div>
               </div>
@@ -1212,11 +1319,25 @@
           <div class="footer__inner">
             <a class="footer__link footer__link--logo">SUPERGYM</a>
             <ul class="footer__nav">
-              <li><a class="footer__link footer__link--nav" href="#">Услуги</a></li>
-              <li><a class="footer__link footer__link--nav" href="#">Абонементы</a></li>
-              <li><a class="footer__link footer__link--nav" href="#">Акции</a></li>
-              <li><a class="footer__link footer__link--nav" href="#">Тренеры</a></li>
-              <li><a class="footer__link footer__link--nav" href="#">Расписание</a></li>
+              <li>
+                <a class="footer__link footer__link--nav" href="#">Услуги</a>
+              </li>
+              <li>
+                <a class="footer__link footer__link--nav" href="#"
+                  >Абонементы</a
+                >
+              </li>
+              <li>
+                <a class="footer__link footer__link--nav" href="#">Акции</a>
+              </li>
+              <li>
+                <a class="footer__link footer__link--nav" href="#">Тренеры</a>
+              </li>
+              <li>
+                <a class="footer__link footer__link--nav" href="#"
+                  >Расписание</a
+                >
+              </li>
             </ul>
             <ul class="footer__socials">
               <li>

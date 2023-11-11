@@ -3,7 +3,7 @@
   display: grid;
   justify-content: center;
   align-items: end;
-  width: 260px;
+  min-width: 260px;
   min-height: 294px;
   height: 100%;
   padding: 45px 20px 26px;
@@ -45,10 +45,16 @@
 .jury-card__picture {
   position: absolute;
   top: 0;
+  display: flex;
+  justify-content: center;
   z-index: -1;
   pointer-events: none;
   width: 260px;
   height: 100%;
+
+  @include vp-1365 {
+    width: 268px;
+  }
 }
 
 .jury-card__text-wrapper {

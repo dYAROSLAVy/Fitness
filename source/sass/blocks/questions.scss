@@ -1,6 +1,10 @@
 .questions {
   padding: 120px 0;
   background-color: $color-ghost-white;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
 }
 
 .questions__title {
@@ -9,12 +13,21 @@
   &:not(:last-child) {
     margin-bottom: 50px;
   }
+
+  @include vp-1365 {
+    text-align: center;
+  }
 }
 
 .questions__tabs {
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 40px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr;
+    gap: 39px;
+  }
 }
 
 .questions__tabs-controls {
@@ -24,6 +37,10 @@
   margin: 2px 0 0;
   padding: 0;
   list-style: none;
+
+  @include vp-1365 {
+    display: flex;
+  }
 }
 
 .questions__tabs-element {
@@ -41,6 +58,11 @@
 
   &:disabled {
     color: $color-link-water;
+  }
+
+  @include vp-1365 {
+    min-width: 162px;
+    border: 1px solid;
   }
 }
 

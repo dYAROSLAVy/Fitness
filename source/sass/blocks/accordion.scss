@@ -17,12 +17,28 @@
 .accordion__element-content button:first-of-type {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 33px 45px 32px 0;
+  min-height: 89px;
+  padding: 25px 45px 24px 0;
+  // padding: 33px 45px 32px 0;
   border: none;
   background-color: transparent;
   color: $color-sapphire;
+
+  @include vp-1365 {
+    // padding: 33px 45px 34px 0;
+    // max-height: 92px;
+  }
+}
+
+.accordion__element-content button:first-of-type br {
+  display: none;
+
+  @include vp-1365 {
+    // display: inline;
+  }
 }
 
 .accordion__element-content button:first-of-type:hover span:first-of-type,
@@ -49,6 +65,13 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
+
+  @include vp-1365 {
+    font-size: 22px;
+    line-height: 22px;
+    text-align: start;
+    max-width: 488px;
+  }
 }
 
 .accordion__element-content span:first-of-type {
@@ -99,6 +122,7 @@
 
 .accordion__item.is-active .accordion__element-content button:first-of-type {
   padding: 33px 45px 12px 0;
+  min-height: auto;
 }
 
 .accordion__element-content p {
@@ -106,4 +130,8 @@
   margin: 0;
   font-size: 18px;
   line-height: 24px;
+
+  @include vp-1365 {
+    max-width: 559px;
+  }
 }

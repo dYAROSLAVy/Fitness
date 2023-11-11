@@ -2,6 +2,14 @@
   position: relative;
   padding: 61px 103px 60px 120px;
 
+  @include vp-1365 {
+    padding: 105px 133px 96px;
+
+    &::before {
+      display: none;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -42,14 +50,25 @@
     width: 1px;
     background-color: $color-light-slate-grey;
   }
+
+  @include vp-1365 {
+    &::after {
+      right: -61px;
+    }
+  }
 }
 
 .contacts__inner {
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
+  }
+
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
   }
 }
-
 
 .contacts__subtitle {
   margin: 0;
@@ -60,6 +79,15 @@
   &:not(:last-child) {
     margin-bottom: 5px;
   }
+
+  @include vp-1365 {
+    font-size: 22px;
+    line-height: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
 }
 
 .contacts__text {
@@ -67,4 +95,16 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
+
+  &--link {
+    color: inherit;
+
+    @include hover-focus {
+      opacity: 0.5;
+    }
+
+    @include active {
+      opacity: 0.3;
+    }
+  }
 }

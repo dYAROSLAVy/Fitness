@@ -1,8 +1,9 @@
 .subscription-card {
   display: grid;
   justify-items: center;
-  width: 360px;
-  padding: 60px 65px 59px;
+  min-width: 360px;
+  width: 100%;
+  padding: 60px 65px 58px;
   background-color: $color-default-white;
   border: 7px solid $color-default-white;
 
@@ -19,10 +20,18 @@
 
 .subscription-card__title:not(:last-child) {
   margin-bottom: 5px;
+
+  @include vp-1365 {
+    margin-bottom: 13px;
+  }
 }
 
 .subscription-card__subtitle:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+
+  @include vp-1365 {
+    margin-bottom: 16px;
+  }
 }
 
 .subscription-card__btn {
@@ -33,28 +42,37 @@
   position: relative;
   display: grid;
   margin: 0;
-  font-size: 60px;
+  min-height: 150px;
   font-weight: 700;
-  line-height: 150px;
   z-index: 2;
 
   &:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 35px;
+  }
+
+  @include vp-1365 {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
   }
 }
 
 .subscription-card__price-back {
   position: absolute;
   z-index: -1;
-  top: 3px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   color: $color-whisper;
   opacity: 48;
   font-size: 100px;
+  line-height: 150px;
+  pointer-events: none;
 }
 
 .subscription-card__price-forw {
-  margin-top: 28px;
+  margin-top: auto;
   color: $color-egyptian-blue;
+  font-size: 60px;
+  line-height: 90px;
 }

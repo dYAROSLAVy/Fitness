@@ -4,4 +4,8 @@
     $color-sapphire 50%,
     $color-default-white 50%
   );
+
+  @include vp-1365 {
+    background: none;
+  }
 }
