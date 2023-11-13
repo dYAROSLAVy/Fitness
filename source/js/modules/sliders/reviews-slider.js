@@ -14,6 +14,14 @@ const reviewsSlider = () => {
         slidesPerView: 1,
         allowTouchMove: false,
       },
+      768: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
+      0: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
     },
     autoHeight: true,
   });

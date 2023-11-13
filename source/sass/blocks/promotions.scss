@@ -4,6 +4,10 @@
   @include vp-1365 {
     padding: 100px 0;
   }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
 }
 
 .promotions__title:not(:last-child) {
@@ -11,6 +15,10 @@
 
   @include vp-1365 {
     margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 42px;
   }
 }
 
@@ -26,6 +34,10 @@
   @include vp-1365 {
     gap: 30px;
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .promotions__item {
@@ -36,6 +48,12 @@
   @include vp-1365 {
     &--primary {
       grid-column: span 2;
+    }
+  }
+
+  @include vp-767 {
+    &--primary {
+      grid-column: auto;
     }
   }
 }

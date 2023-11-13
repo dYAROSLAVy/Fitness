@@ -6,6 +6,10 @@
   @include vp-1365 {
     padding: 100px 133px 99px;
   }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
 }
 
 .form__title {
@@ -19,6 +23,12 @@
   @include vp-1365 {
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+  }
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
   }
 }
@@ -39,6 +49,15 @@
       margin-bottom: 29px;
     }
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .form__input {
@@ -56,6 +75,11 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   &::placeholder {
