@@ -1,7 +1,7 @@
 const reviewsSlider = () => {
-  const swiperWrapper = document.querySelector('.reviews__slider-wrapper');
-  const buttonPrev = document.querySelector('.reviews__slider-button--prev');
-  const buttonNext = document.querySelector('.reviews__slider-button--next');
+  const swiperWrapper = document.querySelector('[data-reviews-slider-wrapper]');
+  const buttonPrev = document.querySelector('[data-reviews-slider-button-prev]');
+  const buttonNext = document.querySelector('[data-reviews-slider-button-next]');
 
   return new window.Swiper(swiperWrapper, {
     loop: false,
@@ -13,6 +13,14 @@ const reviewsSlider = () => {
       1366: {
         slidesPerView: 1,
         allowTouchMove: false,
+      },
+      768: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+      },
+      0: {
+        slidesPerView: 1,
+        allowTouchMove: true,
       },
     },
     autoHeight: true,

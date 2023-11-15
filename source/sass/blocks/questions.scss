@@ -5,6 +5,10 @@
   @include vp-1365 {
     padding: 100px 0;
   }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
 }
 
 .questions__title {
@@ -17,6 +21,12 @@
   @include vp-1365 {
     text-align: center;
   }
+
+  @include vp-767 {
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+  }
 }
 
 .questions__tabs {
@@ -27,6 +37,10 @@
   @include vp-1365 {
     grid-template-columns: 1fr;
     gap: 39px;
+  }
+
+  @include vp-767 {
+    gap: 29px;
   }
 }
 
@@ -40,6 +54,13 @@
 
   @include vp-1365 {
     display: flex;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 3px 0 0;
   }
 }
 
@@ -64,9 +85,16 @@
     min-width: 162px;
     border: 1px solid;
   }
+
+  @include vp-767 {
+    min-width: 141px;
+    padding: 13px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
-.questions__tab-control:not(.disabled) {
+.questions__tab-control:not(:disabled) {
   border-color: rgba($color-sapphire, 0.2);
 
   @include hover-focus {

@@ -7,6 +7,10 @@
   @include vp-1365 {
     padding: 100px 0;
   }
+
+  @include vp-767 {
+    padding: 74px 0 70px;
+  }
 }
 
 .subscriptions__title:not(:last-child) {
@@ -14,6 +18,10 @@
 
   @include vp-1365 {
     margin-bottom: 18px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 2px;
   }
 }
 
@@ -46,6 +54,14 @@
       margin-bottom: 44px;
     }
   }
+
+  @include vp-767 {
+    gap: 46px;
+
+    &:not(:last-child) {
+      margin-bottom: 34px;
+    }
+  }
 }
 
 .subscriptions__button {
@@ -66,6 +82,12 @@
     line-height: 18px;
   }
 
+  @include vp-767 {
+    padding: 20px 0 18px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -76,7 +98,7 @@
     background-color: transparent;
   }
 
-  &--current {
+  &.is-active {
     color: $color-sapphire;
     opacity: 1;
 
@@ -125,11 +147,19 @@
     grid-template-columns: 1fr;
     justify-items: center;
   }
+
+  @include vp-767 {
+    gap: 35px;
+  }
 }
 
 .subscription__item {
   display: flex;
   width: 65%;
+
+  @include vp-767 {
+    width: auto;
+  }
 }
 
 .subscriptions__decor {
@@ -147,5 +177,9 @@
     right: 0;
     width: 327px;
     height: 324px;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
