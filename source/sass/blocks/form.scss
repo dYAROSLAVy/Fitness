@@ -60,7 +60,8 @@
   }
 }
 
-.form__input {
+.form__input input {
+  width: 100%;
   padding: 10px 10px 3px 0;
   font-family: $ff-roboto;
   font-size: 14px;
@@ -99,11 +100,14 @@
   &:disabled {
     opacity: 0.4;
   }
+}
 
-  // &:invalid {
-  //   border-color: red;
-  //   outline: none;
-  // }
+.form__input.is-invalid input {
+  border-color: $color-torch-red-2;
+}
+
+.form__input.is-invalid {
+  color: $color-torch-red-2;
 }
 
 .form__button {

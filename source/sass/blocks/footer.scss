@@ -102,46 +102,43 @@
   }
 }
 
-.footer__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 21px 0;
+.footer__link-nav {
+  position: relative;
+  padding: 5px 10px;
   font-size: 14px;
-  font-weight: 400;
   line-height: 22px;
+  font-weight: 400;
   color: $color-default-white;
 
-  &--nav {
-    position: relative;
-    padding: 5px 10px;
-
-    @include vp-767 {
-      line-height: 20px;
-      margin-left: -5px;
-    }
-  }
-
-  &--socials {
-    position: relative;
-    z-index: 1;
-    width: 25px;
-    height: 65px;
-    color: $color-black-russian;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      height: 25px;
-      width: 25px;
-      border-radius: 50%;
-      background-color: $color-default-white;
-    }
+  @include vp-767 {
+    line-height: 20px;
+    margin-left: -5px;
   }
 }
 
-.footer__link--nav:not(.disabled) {
+.footer__link-socials {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 65px;
+  padding: 21px 0;
+  color: $color-black-russian;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+}
+
+.footer__link-nav:not(.footer__link-nav--disabled) {
   @include hover {
     &::after {
       content: "";
@@ -171,7 +168,16 @@
   }
 }
 
-.footer__link--socials:not(.disabled) {
+.footer__link-nav--disabled {
+  opacity: 0.4;
+  pointer-events: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.footer__link-socials:not(.footer__link-socials--disabled) {
   @include hover-focus {
     color: $color-default-white;
 
@@ -189,19 +195,16 @@
   }
 }
 
-.footer__link.disabled {
-  opacity: 0.4;
-  pointer-events: none;
-
-  &:focus-visible {
-    outline: none;
-  }
-}
-
-.footer__link--socials.disabled {
+.footer__link-socials--disabled {
   color: $color-black-russian;
 
   &::before {
     opacity: 0.3;
+  }
+
+  pointer-events: none;
+
+  &:focus-visible {
+    outline: none;
   }
 }

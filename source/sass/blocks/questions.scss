@@ -94,7 +94,7 @@
   }
 }
 
-.questions__tab-control:not(.disabled) {
+.questions__tab-control:not(:disabled) {
   border-color: rgba($color-sapphire, 0.2);
 
   @include hover-focus {

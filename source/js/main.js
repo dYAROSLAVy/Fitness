@@ -1,8 +1,9 @@
-import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/init-accordion';
 import {initTabs} from './modules/init-tabs';
 import {initSliders} from './modules/sliders/init-sliders';
+import {initSubscriptionsCard} from './modules/subscriptions-cost';
+import {initVideos} from './modules/video/init-videos';
 
 // ---------------------------------
 
@@ -10,8 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
-
-  iosVhFix();
 
   // Modules
   // ---------------------------------
@@ -22,6 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    initVideos();
+    initSubscriptionsCard();
     initSliders();
     initTabs();
     initAccordions();

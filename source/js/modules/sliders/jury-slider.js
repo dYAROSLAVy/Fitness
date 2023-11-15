@@ -1,7 +1,7 @@
 const jurySlider = () => {
-  const swiperWrapper = document.querySelector('.competitions__jury-slider');
-  const buttonPrev = document.querySelector('.competitions__jury-btn--prev');
-  const buttonNext = document.querySelector('.competitions__jury-btn--next');
+  const swiperWrapper = document.querySelector('[data-competitions-jury-slider]');
+  const buttonPrev = document.querySelector('[data-competitions-jury-btn-prev]');
+  const buttonNext = document.querySelector('[data-competitions-jury-btn-next]');
 
   return new window.Swiper(swiperWrapper, {
     loop: true,

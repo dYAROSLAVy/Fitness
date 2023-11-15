@@ -24,7 +24,7 @@
   }
 }
 
-.btn:not(.disabled) {
+.btn:not(.btn--disabled) {
   @include hover-focus {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
@@ -36,7 +36,7 @@
   }
 }
 
-.btn.disabled {
+.btn--disabled {
   opacity: 0.5;
   pointer-events: none;
 
@@ -45,7 +45,7 @@
   }
 }
 
-.btn--primary:not(.disabled) {
+.btn--primary:not(.btn--disabled) {
   color: $color-sapphire;
   border-color: $color-sapphire;
 
@@ -66,7 +66,7 @@
   background: $red-to-blue;
 }
 
-.btn--secondary:not(.disabled) {
+.btn--secondary:not(.btn--disabled) {
   @include hover-focus {
     background: $color-default-white;
   }
@@ -76,13 +76,13 @@
   }
 }
 
-.btn--secondary.disabled {
+.btn--secondary.btn--disabled {
   opacity: 0.5;
   color: $color-default-white;
   border-color: $color-default-white;
 }
 
-.btn--primary.disabled {
+.btn--primary.btn--disabled {
   opacity: 0.3;
   color: $color-sapphire;
   border-color: $color-sapphire;
@@ -107,7 +107,7 @@
   }
 }
 
-.btn--arrow:not(.disabled) {
+.btn--arrow:not(.btn--disabled) {
   @include hover-focus {
     border-color: $color-sapphire;
     color: $color-sapphire;

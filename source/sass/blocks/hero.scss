@@ -99,6 +99,7 @@
 
 .hero__link {
   min-width: 230px;
+  scroll-behavior: smooth;
 
   @include vp-1365 {
     width: 100%;

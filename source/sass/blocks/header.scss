@@ -68,7 +68,7 @@
   }
 }
 
-.header__tel:not(.disabled) {
+.header__tel:not(.header__tel--disabled) {
   @include hover-focus {
     color: $color-sapphire;
   }
@@ -88,7 +88,7 @@
   }
 }
 
-.header__tel.disabled {
+.header__tel--disabled {
   color: $color-ghost-white;
   opacity: 0.5;
   pointer-events: none;

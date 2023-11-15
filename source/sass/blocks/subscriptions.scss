@@ -98,7 +98,7 @@
     background-color: transparent;
   }
 
-  &--current {
+  &.is-active {
     color: $color-sapphire;
     opacity: 1;
 

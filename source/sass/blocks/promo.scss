@@ -24,9 +24,6 @@
 
   @include vp-767 {
     padding: 40px;
-  }
-
-  @include vp-767 {
     gap: 6px;
     min-height: 309px;
   }
@@ -45,8 +42,9 @@
     }
   }
 
-  @include vp-767 {}
-  justify-content: space-evenly;
+  @include vp-767 {
+    justify-content: space-evenly;
+  }
 }
 
 .promo__title {
