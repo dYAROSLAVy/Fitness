@@ -44,6 +44,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px 120px;
+  width: 100%;
+  word-break: break-word;
 
   @include vp-767 {
     grid-template-columns: 1fr;

@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    padding: 69.5px 0;
+    padding: 70px 0;
   }
 }
 
@@ -15,21 +15,24 @@
 
   @include vp-1365 {
     padding: 0 100px;
+    width: 768px;
   }
 
   @include vp-767 {
+    width: 320px;
     padding: 0 47px;
   }
 }
 
 .competitions__promo {
-  justify-content: center;
+  justify-items: center;
 }
 
 .competitions__promo:not(:last-child) {
   margin-bottom: 120px;
 
   @include vp-1365 {
+    margin-top: -0.38px;
     margin-bottom: 100px;
   }
 
@@ -40,6 +43,7 @@
 
 .competitions__title {
   text-align: left;
+  word-break: break-word;
 
   &:not(:last-child) {
     margin-bottom: 45px;
@@ -68,11 +72,11 @@
   transform: translateY(-50%);
 
   &--prev {
-    left: 27px;
+    left: 25px;
   }
 
   &--next {
-    right: 27px;
+    right: 25px;
   }
 
   @include vp-767 {

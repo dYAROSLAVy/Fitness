@@ -17,8 +17,15 @@
     grid-template-columns: 1fr 1fr;
     padding: 0;
 
+    // Пришлось добавить обнуления паддингов при перестроениях из-за багов при проверке тестами
+
     @include vp-1365 {
+      padding: 0;
       grid-template-columns: 1fr;
+    }
+
+    @include vp-767 {
+      padding: 0;
     }
   }
 }

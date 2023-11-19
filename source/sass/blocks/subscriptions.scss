@@ -9,19 +9,21 @@
   }
 
   @include vp-767 {
-    padding: 74px 0 70px;
+    padding: 73px 0 70px;
   }
 }
 
-.subscriptions__title:not(:last-child) {
-  margin-bottom: 14px;
+.subscriptions__title {
+  &:not(:last-child) {
+    margin-bottom: 14px;
 
-  @include vp-1365 {
-    margin-bottom: 18px;
-  }
+    @include vp-1365 {
+      margin-bottom: 18px;
+    }
 
-  @include vp-767 {
-    margin-bottom: 2px;
+    @include vp-767 {
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -29,9 +31,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 0 50px;
-  width: max-content;
+  gap: 20px 50px;
+  flex-wrap: wrap;
   margin: 0 auto;
+  width: fit-content;
 
   &::after {
     content: "";
@@ -49,6 +52,7 @@
 
   @include vp-1365 {
     gap: 55px;
+    max-width: 65%;
 
     &:not(:last-child) {
       margin-bottom: 44px;
@@ -57,6 +61,7 @@
 
   @include vp-767 {
     gap: 46px;
+    max-width: 100%;
 
     &:not(:last-child) {
       margin-bottom: 34px;
@@ -67,6 +72,7 @@
 .subscriptions__button {
   position: relative;
   padding: 20px 0 13px;
+  max-width: 200px;
   border: 0;
   font-family: $ff-roboto;
   font-size: 20px;
@@ -74,8 +80,9 @@
   line-height: 20px;
   color: $color-sapphire;
   opacity: 50%;
-  background-color: $color-transparent;
+  background-color: transparent;
   user-select: none;
+  word-break: break-word;
 
   @include vp-1365 {
     font-size: 18px;
@@ -96,15 +103,6 @@
     width: 100%;
     height: 2px;
     background-color: transparent;
-  }
-
-  &.is-active {
-    color: $color-sapphire;
-    opacity: 1;
-
-    &::after {
-      background-color: $color-crimson;
-    }
   }
 
   @include hover-focus {
@@ -135,6 +133,15 @@
   }
 }
 
+.subscriptions__button.is-active {
+  color: $color-sapphire;
+  opacity: 1;
+
+  &::after {
+    background-color: $color-crimson;
+  }
+}
+
 .subscriptions__list {
   display: grid;
   grid-template-columns: repeat(3, 360px);
@@ -153,12 +160,12 @@
   }
 }
 
-.subscription__item {
+.subscriptions__item {
   display: flex;
   width: 65%;
 
   @include vp-767 {
-    width: auto;
+    width: 100%;
   }
 }
 

@@ -1,10 +1,12 @@
 .promotion {
   display: grid;
+  align-items: center;
   min-height: 211px;
-  padding: 23px 28px 23px;
+  padding: 23px 28px;
   border: 7px solid;
   border-image: $red-to-blue;
   border-image-slice: 1;
+  word-break: break-word;
 
   &--primary {
     display: grid;
@@ -21,7 +23,8 @@
     }
 
     &--primary {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 10px;
     }
   }
@@ -31,15 +34,18 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  align-self: start;
+  height: 100%;
 
   @include vp-767 {
     align-items: center;
+    width: 100%;
     text-align: center;
   }
 }
 
 .promotion--primary .promotion__text-content {
-  padding: 40px 45px 40px;
+  padding: 40px 45px;
 
   @include vp-1365 {
     padding: 45px 45px 40px;
@@ -51,9 +57,11 @@
 }
 
 .promotion--primary .promotion__text-content b {
+  margin-top: 5px;
   font-size: 70px;
   font-weight: 700;
   line-height: 70px;
+
 
   &:not(:last-child) {
     margin-bottom: 25px;
@@ -61,6 +69,7 @@
 
   @include vp-1365 {
     &:not(:last-child) {
+      margin-top: 0;
       margin-bottom: 20px;
     }
   }
@@ -68,14 +77,6 @@
   @include vp-767 {
     font-size: 64px;
     line-height: 64px;
-  }
-}
-
-.promotion--primary .promotion__text-content h3 + b {
-  margin-top: 5px;
-
-  @include vp-1365 {
-    margin-top: 0;
   }
 }
 
@@ -103,7 +104,7 @@
   }
 }
 
-.promotion--primary .promotion__text-content p br {
+.promotion__text-content p br {
   @include vp-767 {
     display: none;
   }
@@ -121,8 +122,20 @@
 
   @include vp-767 {
     width: 100%;
-    height: 330px;
+    height: 100%;
+    max-height: 462px;
+    min-height: 330px;
+    max-width: 399px;
   }
+}
+
+.promotion__picture-wrapper img {
+  width: 100%;
+}
+
+.promotion__picture-wrapper picture {
+  display: flex;
+  flex-grow: 1;
 }
 
 .promotion__text-content h3 {
@@ -209,15 +222,6 @@
       bottom: 6px;
     }
   }
-}
-
-.promotion__text-content a.disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.promotion--primary .promotion__text-content a.disabled {
-  opacity: 0.5;
 }
 
 .promotion--primary .promotion__text-content a {

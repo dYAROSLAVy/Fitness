@@ -23,7 +23,6 @@ const reviewsSlider = () => {
         allowTouchMove: true,
       },
     },
-    autoHeight: true,
   });
 };
 

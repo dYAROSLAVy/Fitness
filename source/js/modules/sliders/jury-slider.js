@@ -19,11 +19,13 @@ const jurySlider = () => {
         slidesPerView: 2,
         spaceBetween: 32,
         allowTouchMove: true,
+        initialSlide: 2,
       },
       0: {
         slidesPerView: 1,
         spaceBetween: 0,
         allowTouchMove: true,
+        initialSlide: 2,
       },
     },
   });

@@ -17,7 +17,7 @@
   text-align: left;
 
   &:not(:last-child) {
-    margin-bottom: 33px;
+    margin-bottom: 23px;
   }
 
   @include vp-1365 {
@@ -39,7 +39,7 @@
   gap: 30px;
 
   &:not(:last-child) {
-    margin-bottom: 28px;
+    margin-bottom: 38px;
   }
 
   @include vp-1365 {
@@ -83,6 +83,12 @@
     line-height: 22px;
   }
 
+  &::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+  }
+
   &::placeholder {
     color: $color-default-white;
   }
@@ -112,4 +118,5 @@
 
 .form__button {
   width: 100%;
+  word-break: break-word;
 }

@@ -34,3 +34,12 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+
+  &--primary {
+    opacity: 0.5;
+  }
+}

@@ -48,9 +48,7 @@ const resetActiveButton = () => {
   });
 };
 
-const getData = (key, index) => {
-  return PRICES[key][index];
-};
+const getData = (key, index) => PRICES[key][index];
 
 const changeSubscriptions = () => {
   durationButtons[0].classList.add('is-active');
@@ -85,7 +83,10 @@ const changeSubscriptions = () => {
 
 
 const initSubscriptionsCard = () => {
-  // проверки
+  if (!durationButtons.length) {
+    return;
+  }
+
   changeSubscriptions();
 };
 
