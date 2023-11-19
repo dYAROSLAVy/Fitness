@@ -4291,6 +4291,7 @@ button,
   }
 
   .btn--arrow {
+    padding: 0 15px;
     width: 42px;
     height: 42px;
   }
